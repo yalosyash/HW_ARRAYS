@@ -2,21 +2,19 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public int sumOfAllSales(int[] arr) {
-        int sum = 0;
-        for (int el : arr) {
+    public long sumOfAllSales(long[] arr) {
+        long sum = 0;
+        for (long el : arr) {
             sum += el;
         }
         return sum;
     }
 
-    public int avgOfSales(int[] arr) {
-        return sumOfAllSales(arr) / (arr.length);
-    }
+    public long avgOfSales(long[] arr) {return sumOfAllSales(arr) / (arr.length);}
 
-    public int monthOfMaxSales(int[] arr) {
+    public long monthOfMaxSales(long[] arr) {
         int monthOfMaxSales = 1;
-        int max = arr[0];
+        long max = arr[0];
         for (int month = 0; month <= arr.length - 1; month++) {
             if (arr[month] > max) {
                 max = arr[month];
@@ -26,9 +24,9 @@ public class StatsService {
         return monthOfMaxSales;
     }
 
-    public int monthOfMinSales(int[] arr) {
+    public long monthOfMinSales(long[] arr) {
         int monthOfMinSales = 1;
-        int min = arr[0];
+        long min = arr[0];
         for (int month = 0; month <= arr.length - 1; month++) {
             if (arr[month] < min) {
                 min = arr[month];
@@ -38,9 +36,9 @@ public class StatsService {
         return monthOfMinSales;
     }
 
-    public int monthsUnderAvg(int[] arr) {
+    public int monthsUnderAvg(long[] arr) {
         int monthsUnderAvg = 0;
-        int avg = avgOfSales(arr);
+        long avg = avgOfSales(arr);
         for (int month = 0; month <= arr.length - 1; month++) {
             if (arr[month] < avg) {
                 monthsUnderAvg++;
@@ -49,9 +47,9 @@ public class StatsService {
         return monthsUnderAvg;
     }
 
-    public int monthsOverAvg(int[] arr) {
+    public int monthsOverAvg(long[] arr) {
         int monthsOverAvg = 0;
-        int avg = avgOfSales(arr);
+        long avg = avgOfSales(arr);
         for (int month = 0; month <= arr.length - 1; month++) {
             if (arr[month] > avg) {
                 monthsOverAvg++;

@@ -3,7 +3,7 @@ import ru.netology.stats.StatsService;
 public class Main {
     public static void main(String[] args) {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         System.out.println("Сумма всех продаж " + service.sumOfAllSales(arr)); // ------------------------ expect 180
         System.out.println("Средняя сумма продаж " + service.avgOfSales(arr)); // ------------------------ expect 15
         System.out.println("Пик продаж в " + service.monthOfMaxSales(arr) + " месяце"); // --------------- expect 6

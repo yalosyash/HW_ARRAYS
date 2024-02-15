@@ -7,9 +7,9 @@ public class StatsServiceTests {
     @Test
     public void shouldCalcSumOfAllSales() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 180;
-        int actual = service.sumOfAllSales(arr);
+        long[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 180;
+        long actual = service.sumOfAllSales(arr);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -17,9 +17,9 @@ public class StatsServiceTests {
     @Test
     public void shouldCalcAvgOfSales() {
         StatsService service = new StatsService();
-        int[] arr = {8, 34, 13, 15, 17, 20, 20, 2, 7, 14, 14, 8};
-        int expected = 14;
-        int actual = service.avgOfSales(arr);
+        long[] arr = {8, 34, 13, 15, 17, 20, 20, 2, 7, 14, 14, 8};
+        long expected = 14;
+        long actual = service.avgOfSales(arr);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -27,9 +27,9 @@ public class StatsServiceTests {
     @Test
     public void shouldCalcMonthOfMaxSales() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 34, 18};
-        int expected = 11;
-        int actual = service.monthOfMaxSales(arr);
+        long[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 34, 18};
+        long expected = 11;
+        long actual = service.monthOfMaxSales(arr);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -37,9 +37,9 @@ public class StatsServiceTests {
     @Test
     public void shouldCalcMonthOfMinSales() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 9;
-        int actual = service.monthOfMinSales(arr);
+        long[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 9;
+        long actual = service.monthOfMinSales(arr);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -47,9 +47,9 @@ public class StatsServiceTests {
     @Test
     public void shouldCalcMonthsUnderAvg() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 5;
-        int actual = service.monthsUnderAvg(arr);
+        long[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+        long actual = service.monthsUnderAvg(arr);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -57,9 +57,9 @@ public class StatsServiceTests {
     @Test
     public void shouldCalcMonthsOverAvg() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 5;
-        int actual = service.monthsOverAvg(arr);
+        long[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+        long actual = service.monthsOverAvg(arr);
 
         Assertions.assertEquals(expected, actual);
     }
