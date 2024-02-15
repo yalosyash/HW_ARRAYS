@@ -12,7 +12,7 @@ public class StatsService {
 
     public long avgOfSales(long[] arr) {return sumOfAllSales(arr) / (arr.length);}
 
-    public long monthOfMaxSales(long[] arr) {
+    public int monthOfMaxSales(long[] arr) {
         int monthOfMaxSales = 1;
         long max = arr[0];
         for (int month = 0; month <= arr.length - 1; month++) {
@@ -24,7 +24,7 @@ public class StatsService {
         return monthOfMaxSales;
     }
 
-    public long monthOfMinSales(long[] arr) {
+    public int monthOfMinSales(long[] arr) {
         int monthOfMinSales = 1;
         long min = arr[0];
         for (int month = 0; month <= arr.length - 1; month++) {
